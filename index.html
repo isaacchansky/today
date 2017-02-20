@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Today</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,900" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <h1 class="page-headline">It's <span data-bind="date-today"></span>.</h1>
+
+        <main class="tabs">
+            <nav>
+                <a href="#events"><span class="icon">📅</span>Events</a>
+                <a href="#deaths"><span class="icon">☠</span>️Deaths</a>
+                <a href="#births"><span class="icon">👶</span>Births</a>
+            </nav>
+            <div class="tabs-content">
+                <section id="events" data-bind="events" class="dynamic-content">
+                </section>
+                <section id="deaths" data-bind="deaths" class="dynamic-content">
+                </section>
+                <section id="births" data-bind="births" class="dynamic-content">
+                </section>
+            </div>
+        </main>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
